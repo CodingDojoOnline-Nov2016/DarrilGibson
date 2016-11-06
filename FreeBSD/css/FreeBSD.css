@@ -1,0 +1,112 @@
+/*Created using Lego concept - Darril Gibson
+Did not do individual links, but instead just grouped them together to focus on creation of page.
+Any and all feedback welcome.*/
+/*generic reset*/
+*{
+ margin: 0px;
+ padding: 0px;
+ /* what is your reasoning for having the vertical align in your reset? */
+ vertical-align: text-top;
+}
+#wrapper {
+  width: 960px;
+  height: auto;
+  margin: 0 auto;
+  background-color: gray;
+}
+#header {
+  /*height: 115px;*/
+  background-color: maroon;
+}
+/* updated from a t1 to style the image directly without the need of another id */
+    #header img {
+      width: 475px;
+      height: 75px;
+      display:inline-block;
+      vertical-align: top;
+    }
+
+    #header div {
+      width: 455px;
+      height: 75px;
+      margin: 10px 0px 0px 0px;
+      display:inline-block;
+      vertical-align: top;
+      color: white;
+      text-align: right;
+    }
+
+        #header div a {
+          color: yellow;
+          font-weight: normal;
+        }
+
+#hdrmenu {
+  height: 30px;
+  padding-top: 10px;
+  padding-left: 30px;
+  font-weight: bold;
+  background-color: gainsboro;
+  border-bottom: solid silver;
+}
+    #hdrmenu a {
+        text-decoration: none;
+    }
+
+#main {
+  width: 960px;
+  height: auto;
+  margin: 0 auto;
+  background-color: white;
+}
+
+#nav {
+  width: 150px;
+  margin: 30px 0px 0px 30px;
+  color: maroon;
+  font-weight: bold;
+  padding: 5px 0px 5px 30px;
+  /*padding-bottom: 5px;
+  padding-top: 5px;*/
+  background-color: gainsboro;
+  border: 3px solid silver;
+  /*border-style: solid;
+  border-color: silver;*/
+  display:inline-block;
+  vertical-align: top;
+}
+
+#content {
+  width: 650px;
+  margin: 30px 0px 0px 30px;
+  vertical-align: top;
+  display: inline-block;
+}
+  #content a {
+    font-weight: bold;
+  }
+  #content p {
+    margin-bottom: 0.67em;
+  }
+
+  #content h1 {
+      color: maroon;
+      margin-bottom: 0.67em;
+  }
+
+  #content h2 {
+      color: maroon;
+      margin-bottom: 0.67em;
+  }
+
+  #content h3 {
+    color: maroon;
+    margin-bottom: 0.67em;
+  }
+  #content ul {
+    padding-left: 50px;
+    margin-bottom: 10px;
+  }
+  #content ol {
+    padding-left: 50px;
+  }

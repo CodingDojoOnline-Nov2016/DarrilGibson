@@ -1,0 +1,49 @@
+/*CSS reset settings here*/
+/* I recreated it with these settings, but ended up ajusting widths to make it match.
+I'm unsure if this was the best method or not though. -Darril Gibson */
+/*{
+ margin: 20px;
+ padding: 10px;
+}*/
+#wrapper{
+ width: 960px;
+ height: 620px;
+ padding-top:20px;
+ background-color: silver;
+ margin: auto;
+ padding: 10px,10px,10px,10px;
+}
+#header{
+ height: 150px;
+ background-color: green;
+  margin: 0px 20px 20px 20px;
+}
+#navigation{
+ height: 300px;
+ width: 200px;
+ background-color: blue;
+ display:inline-block;
+ margin: 00px 00px 0px 20px;
+}
+#main_content{
+ height: 350px;
+ width: 660px;
+ padding:20px;
+ margin-right:20px;
+ background-color: red;
+ display:inline-block;
+ float:right;
+}
+.subcontents{
+ height: 200px;
+ width: 200px;
+ background-color: yellow;
+ margin: 0px 15px 00px 00px;
+ display:inline-block;
+}
+#advertisement{
+ height: 120px;
+ width: 640px;
+ background-color: purple;
+ margin: 20px 00px 00px 00px;
+}

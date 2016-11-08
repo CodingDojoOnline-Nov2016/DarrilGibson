@@ -1,0 +1,150 @@
+/* - Darril Gibson.*/
+
+/*Feedback from Jonathan on FreeBSD*/
+/* what is your reasoning for having the vertical align in your reset? */
+/* updated from a t1 to style the image directly without the need of another id */
+/*#header img {
+  width: 475px;
+  height: 75px;
+  display:inline-block;
+  vertical-align: top;
+}*/
+
+/*generic reset*/
+*{
+ margin: 0px;
+ padding: 0px;
+}
+#container {
+  width: 970px;
+  margin: 0 auto;
+  background-color: whitesmoke;
+}
+  #header {
+    width: 960px;
+    height: 68px;
+    background-color: whitesmoke;
+  }
+    #tl {
+      width: 357px;
+      padding-left: 30px;
+      height: 68px;
+      background-color: whitesmoke;
+      display:inline-block;
+    }
+    #tr {
+      width: 569px;
+      height: 68px;
+      background-color: ghostwhite;
+      display: inline-block;
+      text-align: right;
+    }
+    #trtop {
+      background-color: whitesmoke;
+      width: 569px;
+      height: 20px;
+    }
+    #headermenu {
+      background-color: aliceblue;
+      width: 950px;
+      height: 30px;
+      padding-top: 8px;
+      padding-left: 20px;
+      font-weight: bold;
+      }
+      #headermenu a {
+        text-decoration: none;
+      }
+      #headermenu ul li {
+        list-style-type: none;
+        display: inline;
+      }
+      #headermenu li:not(:first-child):before {
+          content: " | ";
+      }
+.goldhdr {
+    width: 475px;
+    background-color: goldenrod;
+    padding-left:5px;
+    }
+  #main {
+    width: 970px;
+    background-color: black;
+    margin: 0 auto;
+    }
+    #maintl {
+      width: 377px;
+      display: inline-block;
+      border-color: white;
+      margin-top: 30px;
+      margin-left: 30px;
+    }
+    #maintl img {
+      border: 5px solid white;
+    }
+    #maintr {
+      width:480px;
+      margin-top: 30px;
+      margin-left: 50px;
+      border-color: white;
+      color: white;
+      display: inline-block;
+      background-color: #989898;
+      padding-bottom: 15px;
+      vertical-align: top
+    }
+
+    #logo {
+      width: 970px;
+      background-color: black;
+      margin: 0 auto;
+    }
+      #logo img {
+        padding-left: 40px;
+        vertical-align: middle;
+      }
+      #logotext {
+        display:inline;
+        font-size: 75%;
+        margin-left: 10px;
+        color: lightyellow;
+      }
+
+    #thumbcontainer {
+      width: 940px;
+      background-color: white;
+      padding-top:10px;
+      margin: 0 auto;
+      padding-left: 30px;
+      }
+      .thumb {
+        background-color: linen;
+        width: 222px;
+        height: 270px;
+        display:inline-block;
+        margin-right: 7px;
+        margin-bottom: 30px;
+        padding-bottom:10px;
+        vertical-align: top
+      }
+      .thumb img {
+        float: right;
+      }
+      .thumbhdr {
+          font-weight: bold;
+          width: 217px;
+          background-color: goldenrod;
+          padding-left:5px;
+          display: inline-block;
+          }
+p {
+    padding-bottom: 15px;
+    padding-left: 10px;
+    font-size: .78em;
+    }
+
+h2 {
+  padding-left: 10px;
+  padding-top: 10px;
+  font-size: 1.5em;
+}

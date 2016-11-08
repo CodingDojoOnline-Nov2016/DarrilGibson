@@ -1,0 +1,330 @@
+/* - Darril Gibson.*/
+/*generic reset*/
+*{
+ margin: 0px;
+ padding: 0px;
+ vertical-align: text-top;
+}
+#container {
+  width: 970px;
+  margin: 0 auto;
+  background-color: whitesmoke;
+}
+  #header {
+    width: 960px;
+    height: 68px;
+    background-color: whitesmoke;
+  }
+    #tl {
+      width: 357px;
+      padding-left: 30px;
+      height: 68px;
+      background-color: whitesmoke;
+      display:inline-block;
+    }
+    #tr {
+      width: 569px;
+      height: 68px;
+      background-color: ghostwhite;
+      display: inline-block;
+      text-align: right;
+    }
+    #trtop {
+      background-color: whitesmoke;
+      width: 569px;
+      height: 20px;
+    }
+    #headermenu {
+      background-color: aliceblue;
+      width: 950px;
+      height: 30px;
+      display: inline-block;
+      padding-top: 8px;
+      padding-left: 20px;
+      font-weight: bold;
+      }
+      #headermenu a {
+        text-decoration: none;
+      }
+      #headermenu ul li {
+        list-style-type: none;
+        display: inline;
+      }
+      #headermenu li:not(:first-child):before {
+          content: " | ";
+      }
+.goldhdr {
+    display: inline-block;
+    width: 475px;
+    background-color: goldenrod;
+    padding-left:5px;
+    }
+  #main {
+    width: 970px;
+    background-color: black;
+    margin: 0 auto;
+      /*display:block;*/
+    }
+    #maintl {
+      width: 377px;
+      display: inline-block;
+      border-color: white;
+      margin-top: 30px;
+      margin-left: 30px;
+    }
+    #maintl img {
+      border: 5px solid white;
+    }
+    #maintr {
+      width:480px;
+      margin-top: 30px;
+      margin-left: 50px;
+      border-color: white;
+      color: white;
+      display: inline-block;
+      background-color: #989898;
+      padding-bottom: 15px;
+    }
+
+
+
+    #mainmsg {
+      width: 920px;
+      margin-left: 20px;
+      background-color: black;
+      margin: 0 auto;
+
+    }
+      /*#mainmsglogo {
+        display:inline-block;
+      }*/
+      #mainmsgtext {
+        display:inline;
+        margin-top: 10px;
+        margin-left: 10px;
+        color: lightyellow;
+      }
+    /*#maintop {
+      width: 920px;
+      margin-left: 30px;
+      padding-top: 40px;
+      background-color: black;
+    }*/
+      /*#mainpic {
+        width: 377px;
+        border-color: white;
+      }*/
+        /*#mainpic img {
+          border: 5px solid white;
+        }*/
+      /*#mainabout {
+        width:500px
+        background-color: azure;
+        display: inline-block;
+      }*/
+      /*#mainabouttxt {
+        background-color: brown;
+        color: white;
+        display: inline-block;
+      }*/
+
+p {
+    padding-bottom: 15px;
+    padding-left: 10px;
+    font-size: .78em;
+    }
+
+h2 {
+  padding-left: 10px;
+  padding-top: 10px;
+  font-size: 1.5em;
+}
+  /*#header {
+    width: 970px;
+    margin: 0 auto;
+    background-color: gray;
+    display: inline-block;
+  }*/
+    /*#headertop {
+      width: 970px;
+      height:300px;
+      background-color: blue;
+      display: inline-block;
+    }*/
+      /*#headertoplt {
+        width: 357px;
+        padding-left: 30px;
+        display: inline;
+      }
+      #headertoprt {
+        width: 400px;
+        height: 68px;
+        display: inline;
+      }*/
+        /*#headertoprttop {
+          background-color: whitesmoke;
+          width: 403px;
+          height: 20px;
+          display: inline-block;
+        }*/
+        /*#headertoprtbtm {
+          background-color: ghostwhite;
+          width: 403px;
+          height: 48px;
+          text-align: right;
+          padding-right: 20px;
+          display: block;
+        }*/
+
+
+
+
+
+    #mainthumbs {
+        background-color: black;
+        /*display: inline-block;*/
+        margin-left: 30px;
+        margin-top: 5px;
+        margin-bottom: 20px
+        /*padding-top: 5px;
+        padding-left: 20px;*/
+    }
+    .thumb {
+      background-color: linen;
+      width: 222px;
+      display:inline-block;
+      margin-right: 7px;
+      margin-bottom: 30px;
+      padding-bottom:10px;
+      /*margin: 0px 10px 10px 10px 5px;*/
+    }
+    .thumb img {
+      float: right;
+    }
+    .thumbhdr {
+        display: block;
+        font-weight: bold;
+        background-color: goldenrod;
+        padding-left:5px;
+        /*display: inline-block;*/
+        }
+    /*img {
+        display: block;
+        margin: auto;
+    }*/
+
+      /*#thumb1 {
+        background-color: silver;
+        display:inline-block;
+      }
+      #thumb2 {
+        background-color: silver;
+        display:inline-block;
+      }
+      #thumb3 {
+        background-color: silver;
+        display:inline-block;
+      }
+      #thumb4 {
+        background-color: silver;
+        display:inline-block;
+      }*/
+
+/*#wrapper {
+  width: 960px;
+  height: auto;
+  margin: 0 auto;
+  background-color: gray;
+}
+#header {
+  width: 960px;
+  height: 115px;
+  background-color: maroon;
+}
+#tl {
+  width: 475px;
+  height: 75px;
+  display:inline-block;
+}
+
+#tr {
+  width: 455px;
+  height: 75px;
+  margin: 10px 0px 0px 0px;
+  display:inline-block;
+  color: white;
+  text-align: right;
+}
+
+#tr a {
+  color: yellow;
+  font-weight: normal;
+}
+
+#hdrmenu {
+  width: 930px;
+  height: 30px;
+  padding-top: 10px;
+  padding-left: 30px;
+  font-weight: bold;
+  background-color: Gainsboro;
+  border-bottom: solid silver;
+  display: inline-block;
+}
+hdrmenu a {
+    text-decoration: none;
+}
+
+#main {
+  width: 960px;
+  height: auto;
+  margin: 0 auto;
+  background-color: white;
+}
+
+#nav {
+  width: 180px;
+  margin: 30px 00px 0px 30px;
+  color: maroon;
+  font-weight: bold;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  background-color: Gainsboro;
+  border-style: solid;
+  border-color: silver;
+  display:inline-block;
+}
+
+#content {
+  width: 700px;
+  margin: 30px 0px 0px 30px;
+  vertical-align: text-top;
+  display:inline-block;
+  }
+  a {
+    font-weight: bold;
+  }
+  p {
+    margin-bottom: 0.67em;
+  }
+
+h1 {
+  color: maroon;
+  margin-bottom: 0.67em;
+  }
+
+h2 {
+  color: maroon;
+  margin-bottom: 0.67em;
+  }
+
+  h3 {
+    color: maroon;
+    margin-bottom: 0.67em;
+  }
+  ul {
+    padding-left: 50px;
+  }
+  ol {
+    padding-left: 50px;
+  }*/

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Ninja To Cat</title>
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" type="text/css" href="css/normalize.css">
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+      </script>
+      <!-- Use local copy when disconnected -->
+      <!-- <script type="text/javascript" src="js/3.1.1jquery.min.js">
+      </script> -->
+      <script type="text/javascript" src="js/myjs.js">
+      </script>
+      <script type="text/javascript">
+        $(document).ready(function(){
+
+          $('img').click(function() {
+            //swap values - This works
+            var tmp = $(this).attr("src");
+            var tmpalt = $(this).attr("data-alt-src");
+            $(this).attr("src", tmpalt);
+            $(this).attr("data-alt-src", tmp);
+
+            //This doesn't work
+            // var tmp = $(this).attr("src");
+            // $(this).attr("src", "data-alt-src");
+            // $(this).attr("data-alt-src", tmp);
+            // console.log("after");
+            // console.log("data-alt-src value is", $(this).attr("data-alt-src"));
+            //   //value is correct
+            // console.log("src value is", $(this).attr("src"));
+              //value is string "data-alt-src" instead of value of data-alt-src
+          })
+
+          // Test that jquery ready function is working
+          // $("div").css("border", "5px solid blue");
+
+        }); //End of document ready
+        </script>
+   </head>
+   <body>
+       <div id="wrapper">
+         <div id="header">
+           <h2>JQuery Assignment 1</h2>
+         </div> <!-- end of header -->
+         <div class="pics">
+           <img src='images/cat0.png' data-alt-src='images/ninja0.png' />
+           <img src='images/ninja1.png' data-alt-src='images/cat1.png' />
+           <img src='images/cat2.png' data-alt-src='images/ninja2.png' />
+           <img src='images/ninja3.png' data-alt-src='images/cat3.png' />
+           <img src='images/cat4.png' data-alt-src='images/ninja4.png' />
+         </div>
+
+      </div><!-- end of wrapper -->
+   </body>
+</html>

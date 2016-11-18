@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>jQueryFunctions</title>
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" type="text/css" href="css/normalize.css">
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+      </script>
+
+      <script type="text/javascript">
+        $(document).ready(function(){
+          //Hide clicked image
+          $("img").click(function() {
+            $(this).hide();
+          })
+          //Restore - show all images
+          $("#restorebtn").click(function() {
+            $("img").show();
+          })
+        }); //End of document ready
+        </script>
+   </head>
+   <body>
+       <div id="wrapper">
+         <div id="header">
+           <h2>JQuery Assignment 1</h2>
+         </div> <!-- end of header -->
+         <div class="pics">
+           <img src="images/mentorsq.png" alt="Click me" >
+           <img src="images/mentorsq2.png" alt="Click me" >
+           <img src="images/mentorsq3.png" alt="Click me" >
+           <img src="images/mentorsq4.png" alt="Click me" >
+          </div>
+          <div class="pics">
+           <img src="images/mentorsq5.png" alt="Click me" >
+           <img src="images/mentorsq6.png" alt="Click me" >
+           <img src="images/mentorsq7.png" alt="Click me" >
+           <img src="images/mentorsq8.png" alt="Click me" >
+         </div>
+         <div class="pics">
+           <button class="button" id="restorebtn">Restore</button>
+         </div>
+      </div><!-- end of wrapper -->
+   </body>
+</html>

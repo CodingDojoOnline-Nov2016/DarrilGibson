@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>jQueryFunctions</title>
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" type="text/css" href="css/normalize.css">
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+      </script>
+
+      <script type="text/javascript">
+        $(document).ready(function(){
+
+          $("img").hover (function(){
+            //hover in function
+            var tmpalt = $(this).attr("data-alt-src");
+            var tmpsrc = $(this).attr("src");
+              $(this).attr("src", tmpalt);
+            $(this).attr("data-alt-src", tmpsrc);
+              //end of hover in
+          }, function(){
+               //hover out function
+               // new function so vars need to be declared again
+            var tmpsrc = $(this).attr("data-alt-src");
+            var tmpalt = $(this).attr("src");
+      			$(this).attr("src", tmpsrc);
+            $(this).attr("data-alt-src", tmpalt);
+      		})
+
+        }); //End of document ready
+        </script>
+   </head>
+   <body>
+       <div id="wrapper">
+         <div id="header">
+           <h2>JQuery Assignment 1</h2>
+         </div> <!-- end of header -->
+         <div class="pics">
+           <img src="images/mentorsq.png" alt="Click me" data-alt-src="images/mentorsq5.png" >
+           <img src="images/mentorsq2.png" alt="Click me" data-alt-src="images/mentorsq6.png">
+           <img src="images/mentorsq3.png" alt="Click me" data-alt-src="images/mentorsq7.png">
+           <img src="images/mentorsq4.png" alt="Click me" data-alt-src="images/mentorsq8.png">
+          </div>
+          <div class="pics">
+           <img src="images/mentorsq5.png" alt="Click me" data-alt-src="images/mentorsq.png">
+           <img src="images/mentorsq6.png" alt="Click me" data-alt-src="images/mentorsq2.png">
+           <img src="images/mentorsq7.png" alt="Click me" data-alt-src="images/mentorsq3.png">
+           <img src="images/mentorsq8.png" alt="Click me" data-alt-src="images/mentorsq4.png">
+         </div>
+      </div><!-- end of wrapper -->
+   </body>
+</html>

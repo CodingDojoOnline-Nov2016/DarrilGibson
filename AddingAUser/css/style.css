@@ -1,0 +1,61 @@
+/*  -Darril Gibson
+/*CSS reset settings here*/
+{
+ margin: 20px;
+ padding: 10px;
+}
+/*Page wrapper*/
+#wrapper{
+ width: 970px;
+ height: auto;
+ background-color: white;
+ margin: 0 auto;
+}
+  #header {
+    width:940px;
+    display: inline-block;
+    margin: 5px 5px 0px 5px;
+    padding: 10px;
+    background-color: blue;
+    border-bottom: 5px solid black;
+  }
+    #header h2 {
+      margin: 0px 0px 0px 350px;
+      color: white;
+    }
+  #dynamicTable {
+    margin: 5px 0px 0px 5px;
+    border: 1px solid black;
+
+  }
+    #dynamicTable th {
+      height: 20px;
+      padding: 1px 25px 0px 3px;
+    }
+  #addUserForm {
+    display: table;
+    text-align: right;
+    width: 400px;
+    clear: both;
+  }
+  #addUserForm p {
+    display: table-row;
+    line-height: 2em;
+  }
+  #addUserForm label {
+    display: table-cell;
+  }
+  #addUserDiv {
+    width: 400px;
+    border-top: 3px solid darkgray;
+    padding-top: 10px;
+  }
+    .addUserBtn {
+      border: 1px solid black;
+      background-color: aliceblue;
+      border-radius: 3px;
+    }
+    .divBtn {
+      text-align: right;
+      margin-top: 25px;
+    }

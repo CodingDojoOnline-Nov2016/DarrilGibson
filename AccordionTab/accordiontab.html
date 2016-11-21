@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Accordion and Tab jQuery UI</title>
+      <link rel="stylesheet" type="text/css" href="css/normalize.css">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" href="/resources/demos/style.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+        <!-- Start of jquery-ui -->
+      <script>
+      // jQuery-ui tabs
+      $( function() {
+        $( "#tabs" ).tabs();
+      } );
+
+      // jQuery-ui accordion
+      $( function() {
+        $( "#accordion" ).accordion({
+          heightStyle: "content"
+        });
+
+        $( "#accordion-resizer" ).resizable({
+          minHeight: 140,
+          minWidth: 200,
+          resize: function() {
+            $( "#accordion" ).accordion( "refresh" );
+          }
+        });
+      } );
+
+      // jQuery-ui progressbar
+
+      $( function() {
+        $( "#progressbar35" ).progressbar({
+          value: 35
+        });
+      } );
+      $( function() {
+        $( "#progressbar100" ).progressbar({
+          value: 100
+        });
+      } );
+
+      </script> <!-- End  of jquery-ui -->
+
+   </head>
+   <body>
+       <div id="wrapper">
+         <div id="header">
+           <h2>JQuery UI Accordion and Tab</h2>
+         </div> <!-- end of header -->
+
+         <div id="tabs">
+          <ul>
+            <li><a href="#Simpsons">Who are the Simpsons</a></li>
+            <li><a href="#Homer">Homer</a></li>
+            <li><a href="#Marge">Marge</a></li>
+            <li><a href="#Bart">Bart</a></li>
+            <li><a href="#Lisa">Lisa</a></li>
+            <li><a href="#Maggie">Maggie</a></li>
+          </ul>
+          <div id="Simpsons">
+            <p>The Simpsons are a family who live in Springfield (maybe even the Springfield in your state).</p>
+            <img src="images/Simpsons.png" alt="The Simpsons" >
+          </div>
+          <div id="Homer">
+            <p>A lovable buffoon.</p>
+            <img src="images/homer.png" alt="Homer" >
+          </div>
+          <div id="Marge">
+            <p>A loving mother and wife.</p>
+            <img src="images/marge.gif" alt="Marge" >
+          </div>
+          <div id="Bart">
+            <p>A ten-year-old troublemaker.</p>
+            <img src="images/bart.gif" alt="Bart" >
+          </div>
+          <div id="Lisa">
+            <p>A precocious eight-year-old activist.</p>
+            <img src="images/lisa.png" alt="Lisa" >
+          </div>
+          <div id="Maggie">
+            <p>The baby of the family who rarely speaks, but communicates by sucking on a pacifier.</p>
+            <img src="images/maggie.png" alt="Lisa" >
+          </div>
+        </div>    <!-- end of tabs -->
+
+        <h3>Your progess so far:</h3>
+        <div id="progressbar35">
+        </div>
+
+         <h1>FAQ Lst</h1>
+         <div id="accordion-resizer" class="ui-widget-content">
+
+           <div id="accordion">
+           <h3>FAQ List</h3>
+           <div>
+             <p>Click on any question to see the answer.</p>
+           </div>
+           <h3>What is jQuery?</h3>
+           <div>
+             <p>Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam.</p>
+           </div>
+           <h3>What is jQuery-ui?</h3>
+           <div>
+             <p>Vestibulum sit amet purus. </p>
+           </div>
+           <h3>What is required for jQuery-ui?</h3>
+           <div>
+             <p>You need the following three items, in this order</p>
+             <ol>
+               <li>The jqeury js file: https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js</li>
+               <li>The jqeury-ui css file: https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css<li>
+               <li>The jqeury-ui js file: https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js</li>
+             </ol>
+           </div>
+           <h3>Why is the color blue on the jquery-ui site, but not on mine?</h3>
+           <div>
+             <p>It remains a mystery for now.</p>
+           </div>
+         </div>
+       </div> <!-- end of div id="accordion-resizer" class="ui-widget-content"> -->
+       <h3>Your progess so far:</h3>
+       <div id="progressbar100">
+       </div>
+       <h2>Congratulations. You've completed this page.</h2>
+      </div><!-- end of wrapper -->
+   </body>
+</html>

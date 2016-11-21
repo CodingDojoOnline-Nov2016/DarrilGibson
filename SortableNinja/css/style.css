@@ -1,0 +1,46 @@
+/*  -Darril Gibson
+/*CSS reset settings here*/
+{
+ margin: 20px;
+ padding: 10px;
+}
+/*Page wrapper*/
+#wrapper{
+ width: 970px;
+ height: auto;
+ background-color: white;
+ margin: 0 auto;
+}
+  #header {
+    width:940px;
+    display: inline-block;
+    margin: 5px 5px 0px 5px;
+    padding: 10px;
+    background-color: blue;
+    border-bottom: 5px solid black;
+  }
+    #header h2 {
+      margin: 0px 0px 0px 350px;
+      color: white;
+    }
+    .pics {
+      width:40px;
+      padding: 5px 0px 5px 200px;
+      background-color: white;
+      display: inline-block;
+      margin: 0 auto;
+    }
+
+      .button {
+          background-color: forestgreen;
+          border-style: solid;
+          border-color: black;
+          box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+          color: white;
+          padding: 3px 5px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 12px;
+          margin: 4px 2px;
+      }

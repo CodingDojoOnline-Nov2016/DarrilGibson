@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <title>Sortable Ninja</title>
+      <link rel="stylesheet" type="text/css" href="css/normalize.css">
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" href="/resources/demos/style.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+        <!-- Start of jquery-ui -->
+      <script>
+        $( function() {
+          $( "#sortable" ).sortable();
+          $( "#sortable" ).disableSelection();
+        } );
+      </script> <!-- End  of jquery-ui -->
+
+   </head>
+   <body>
+       <div id="wrapper">
+         <div id="header">
+           <h2>JQuery UI Sortable Ninja</h2>
+         </div> <!-- end of header -->
+
+         <div class="pics" id="sortable">
+          <img src="images/sort3.png" alt="Ninja puzzle piece" />
+          <img src="images/sort1.png" alt="Ninja puzzle piece" />
+          <img src="images/sort5.png" alt="Ninja puzzle piece"/>
+          <img src="images/sort2.png" alt="Ninja puzzle piece"/>
+          <img src="images/sort4.png" alt="Ninja puzzle piece" />
+        </div>
+      </div><!-- end of wrapper -->
+   </body>
+</html>

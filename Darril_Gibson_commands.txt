@@ -1,0 +1,18 @@
+right-click
+Windows 10 prevented me from going to desktop. Went to CodingDojo folder.
+mkdir test
+cd test
+touch index.html
+touch styles.css
+touch commands.txt
+cp index.html index_2.html
+cd ..
+mkdir destination
+rm test/styles.css
+cd test
+ls
+cd ..
+rmdir -rf destination
+ // note that this was difficult to find online.
+ // I remembered it in the Terminal Commands page, but didn't remember the syntax. 
+ // I ultimately looked at the Terminal Commands page to find it.

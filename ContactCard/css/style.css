@@ -1,0 +1,78 @@
+/*  -Darril Gibson
+/*CSS reset settings here*/
+{
+ margin: 20px;
+ padding: 10px;
+}
+/*Page wrapper*/
+#wrapper{
+ width: 970px;
+ height: auto;
+ background-color: white;
+ margin: 0 auto;
+}
+  #header {
+    width:940px;
+    display: inline-block;
+    margin: 5px 5px 0px 5px;
+    padding: 10px;
+    background-color: blue;
+    border-bottom: 5px solid black;
+  }
+    #header h2 {
+      margin: 0px 0px 0px 350px;
+      color: white;
+    }
+  #addUserDiv {
+    display: inline-block;
+    width: 450px;
+    margin: 0px 5px 5px 5px;
+    padding-top: 10px;
+  }
+  #addUserForm {
+    display: table;
+    text-align: left;
+    margin-left: 20px;
+    width: 400px;
+    clear: both;
+  }
+  #addUserForm p {
+    display: table-row;
+    line-height: 2em;
+  }
+  #addUserForm label {
+    display: table-cell;
+    vertical-align: top;
+  }
+    .addUserBtn {
+      border: 1px solid black;
+      margin-left: 10px;
+      background-color: aliceblue;
+      border-radius: 3px;
+    }
+    .divBtn {
+      text-align: left;
+      margin-top: 25px;
+      padding-left: 20px;
+    }
+  #showUserDiv {
+  display: inline-block;
+  vertical-align: top;
+  width: 450px;
+}
+  .userbox {
+    display: inline-block;
+    background-color: white;
+    width: 430px;
+    border: 3px solid black;
+    margin: 5px 5px 0px 5px;
+  }
+    .userbox h1 {
+      text-align: center;
+    }
+    .userbox p {
+      text-align: center;
+    }
+    .userdescription {
+      text-align: left;
+    }

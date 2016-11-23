@@ -1,0 +1,3 @@
+Homer,Simpson,homer@simpsons.com,555-1111, 555-2222,https://en.wikipedia.org/wiki/Homer_Simpson#/media/File:Homer_Simpson_2006.png, The donut eating guru
+Lisa,Simpson,lisa@simpsons.com,555-2323, 555-2333,https://upload.wikimedia.org/wikipedia/en/e/ec/Lisa_Simpson.png, The smart one
+Bart,Simpson,bart@simpsons.com,555-1111, 555-2222,https://upload.wikimedia.org/wikipedia/en/a/aa/Bart_Simpson_200px.png, The rebellious one

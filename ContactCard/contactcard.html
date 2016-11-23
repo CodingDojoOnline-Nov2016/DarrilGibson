@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Compu-Global-Hyper-Mega-Net Contacts</title>
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" type="text/css" href="css/normalize.css">
+      <!-- <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+      </script> -->
+      <!-- Use local copy when disconnected-->
+      <script type="text/javascript" src="js/3.1.1jquery.min.js">
+      </script>
+      <script type="text/javascript" src="js/myjs.js">
+      </script>
+      <script type="text/javascript">
+        $(document).ready(function(){
+          $(document).on("click", ".userbox", function(){
+                  // Toggle between username and description/image
+                  $(this).find("h1").toggle();
+                  $(this).find("p").toggle();
+                  $(this).find(".userdescription").toggle();
+              })
+
+          // hide all descriptions on page load //
+          $(".userdescription").hide();
+
+          ///// Add contact section /////
+          $("#addUserForm").submit(function() {
+            var strfn = $("#addUserDiv").find("input[name='first_name']").val();
+            var strln = $("#addUserDiv").find("input[name='last_name']").val();
+            var strurl = $("#addUserDiv").find("input[name='picurl']").val();
+            // Following line creates img src URL but requires picture in the images folder
+            var strpic = "<img src=\"" + strurl + "\" alt=\"" + strfn + "\">";
+            var strdesc = $(".divBtn").find("textarea[name='desc']").val();
+            console.log(strfn + strln + strpic + strdesc);
+
+            //Create and show new box.
+            $( "#showUserDiv" ).prepend("<div class='userbox'><h1>" +
+             strfn + " " + strln +
+             "</h1><p>Click for Description</p>" +
+             "<div class='userdescription'>" +
+             strpic + strdesc + "</div>");
+             //Hide description and pic url
+             $(".userdescription").hide();
+            //Don't submit form to non-existent php file
+            return false;
+          }) // End of addUserForm
+
+          $(".addUserBtn").click(function(){
+            $("#addUserForm").submit();
+          })
+
+          // Test that jquery ready function is working
+          // $("div").css("border", "5px solid blue");
+
+        }); //End of document ready
+        </script>
+   </head>
+   <body>
+       <div id="wrapper">
+         <div id="header">
+           <h2>Compu-Global-Hyper-Mega-Net Contacts</h2>
+         </div> <!-- end of header -->
+         <div id="addUserDiv">
+           <form id="addUserForm" action="canufindme.php" method="post">
+             <p><label>First Name:</label><input type="text" name="first_name" placeholder="First Name"></p>
+             <p><label>Last Name:</label><input type="text" name="last_name" placeholder="Last Name"></p>
+             <p><label>Picture URL:</label><input type="text" name="picurl" placeholder="images/lisa.png"></p>
+           </form>
+           <div class="divBtn">
+             <p><label>Description:</label></p>
+             <p><textarea rows="4" cols="45" name="desc" form="addUserForm" placeholder="Enter description"></textarea></p>
+             <button class="addUserBtn">Add User</button>
+           </div>
+         </div>
+         <div id="showUserDiv">
+           <div class="userbox">
+             <h1>Homer Simpson</h1>
+             <p>Click for Description</p>
+             <div class="userdescription">
+               <h2>A lovable buffoon and lover of donuts and Duff beer.</h2>
+               <img src="images/homer.png" alt="Homer" >
+             </div>
+           </div>
+           <div class="userbox">
+             <h1>Marge Simpson</h1>
+             <p>Click for Description</p>
+             <div class="userdescription">
+               <h2>A loving mother and wife with the tallest and bluest hair on television.</h2>
+               <img src="images/marge.gif" alt="Marge" >
+             </div>
+           </div>
+           <div class="userbox">
+             <h1>Bart Simpson</h1>
+             <p>Click for Description</p>
+             <div class="userdescription">
+               <h2>A ten-year-old troublemaker that can often be seen writing on the blackboard.</h2>
+               <img src="images/bart.gif" alt="Bart" width="50%" height="50%">
+             </div>
+           </div>
+         </div>
+      </div><!-- end of wrapper -->
+   </body>
+</html>

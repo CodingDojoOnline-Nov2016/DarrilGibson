@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <title>Ninjas</title>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/normalize.css') }}">
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    <body>
+      <div id="wrapper">
+        <div id="header">
+          <h2>Learn about Ninjas</h2>
+        </div> <!-- end of header -->
+        <div id="myhdrmenu" >
+          <ul>
+           <li><a href="/"> Home </a></li>
+           <li><a href="http://localhost:5000/ninjas" title="About Ninjas"> About Ninjas </a></li>
+           <li><a href="http://localhost:5000/dojos/new/dojos" title="join our Dojo" > Join our Dojo </a></li>
+          </ul>
+         </div><!--  End of headermenu -->
+      <h3>About Ninjas (from Wikipedia)</h3>
+      <!-- this will output the value of our phrase variable -->
+      <p>A ninja (忍者) or shinobi (忍び) was a covert agent or mercenary in feudal Japan. The functions of the ninja included espionage, sabotage, infiltration, assassination and guerrilla warfare.[1] Their covert methods of waging irregular warfare were deemed "dishonorable" and "beneath" the samurai-caste, who observed strict rules about honor and combat.[2] The shinobi proper, a specially trained group of spies and mercenaries, appeared in the 15th century during the Sengoku period, but antecedents may have existed in the 14th century,[4] and possibly in the 12th century (Heian or early Kamakura era).</p>
+      <!-- this will output the value of our times variable -->
+      <img src="{{ url_for('static', filename='images/ninja.jpeg') }}">
+      <p>While this is cool, it makes me wonder if it's possible to create a single html page, and put webparts into them to change the display.</p>
+    </div>
+    </body>
+</html>

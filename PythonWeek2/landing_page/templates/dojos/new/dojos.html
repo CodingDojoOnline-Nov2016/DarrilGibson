@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <title>Dojos</title>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/normalize.css') }}">
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    <body>
+      <div id="wrapper">
+        <div id="header">
+          <h2>Join the Dojo</h2>
+        </div> <!-- end of header -->
+         <div id="myhdrmenu" >
+           <ul>
+            <li><a href="/"> Home </a></li>
+            <li><a href="http://localhost:5000/ninjas" title="About Ninjas"> About Ninjas </a></li>
+            <li><a href="http://localhost:5000/dojos/new/dojos" title="join our Dojo" > Join our Dojo </a></li>
+           </ul>
+          </div><!--  End of headermenu -->
+        <h3>Please complete this application to join the Dojo.</h3>
+        <div id="joinDiv">
+          <form id="joinForm" action="canufindme.php" method="post">
+            <p><label>First Name:</label><input type="text" name="first_name" placeholder="First Name"></p>
+            <p><label>Last Name:</label><input type="text" name="last_name" placeholder="Last Name"></p>
+            <p><label>Email Address:</label><input type="text" name="email" placeholder="Email Address"></p>
+          </form>
+          <div class="divBtn">
+            <p><label>About you - Tell us why you want to join.</label></p>
+            <p><textarea rows="4" cols="80" name="desc" form="addUserForm" placeholder="Enter information about yourself"></textarea></p>
+            <button class="joinBtn">Apply Now</button>
+          </div>
+        </div>
+       </div> <!-- end of wrapper -->
+    </body>
+</html>

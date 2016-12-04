@@ -1,0 +1,37 @@
+#wrapper{
+ width: 970px;
+ height: auto;
+ background-color: pink;
+ margin: 0 auto;
+}
+  #header {
+    width:940px;
+    display: inline-block;
+    margin: 5px 5px 0px 5px;
+    padding: 10px;
+    background-color: blue;
+    border-bottom: 5px solid black;
+  }
+    #header h2 {
+      margin: 0px 0px 0px 350px;
+      color: white;
+    }
+#joinDiv {
+  display: inline-block;
+  width: 450px;
+  margin: 0px 5px 5px 5px;
+  padding-top: 10px;
+}
+#joinForm {
+  display: table;
+  text-align: left;
+  margin-left: 20px;
+  width: 400px;
+  clear: both;
+}
+.joinBtn {
+  border: 1px solid black;
+  margin-left: 10px;
+  background-color: aliceblue;
+  border-radius: 3px;
+}

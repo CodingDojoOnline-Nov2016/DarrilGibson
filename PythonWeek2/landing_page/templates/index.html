@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <title>Landing Page</title>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/normalize.css') }}">
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    <body>
+      <div id="wrapper">
+        <div id="header">
+          <h2>Welcome</h2>
+        </div> <!-- end of header -->
+        <div id="myhdrmenu" >
+          <ul>
+           <li><a href="/"> Home </a></li>
+           <li><a href="http://localhost:5000/ninjas" title="About Ninjas"> About Ninjas </a></li>
+           <li><a href="http://localhost:5000/dojos/new/dojos" title="join our Dojo" > Join our Dojo </a></li>
+          </ul>
+         </div><!--  End of headermenu -->
+        <h3>Welcome</h3>
+        <p>{{ phrase }}</p>
+        <p>Here's your Pythen Zen Quote of the Day:</p>
+        <h3> {{ python_zen }}</h3>
+        <img src="{{ url_for('static', filename='images/bart.gif') }}">
+      </div>  <!-- end of wrapper -->
+    </body>
+</html>

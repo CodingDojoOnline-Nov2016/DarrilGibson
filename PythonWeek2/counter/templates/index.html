@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <title>Counter</title>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/normalize.css') }}">
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+      <link href="{{ url_for('static', filename='images/favicon.ico') }}" rel="icon" type="image/x-icon" />
+    </head>
+    <body>
+      <div id="wrapper">
+        <div id="header">
+          <h2>Counter</h2>
+        </div> <!-- end of header -->
+        <div id="myhdrmenu" >
+          <ul>
+           <li><a href="{{ url_for('static', filename='images/home.jpg') }}"> Home </a></li>
+           <!-- <img src="{{ url_for('static', filename='images/bart.gif') }}"> -->
+          </ul>
+         </div><!--  End of headermenu -->
+        <div class="counterDiv">
+          <h2>Counter</h2>
+          <p>This page has been visited {{session['visit_counter']}} times.</p>
+          <p>Add two to counter</p>
+          <form action="/double" method="post">
+            <!-- <button type="submit" value="Increment" /> -->
+            <button class="counterBtn" type="submit" value="Increment">Increment</button>
+          </form>
+          <p>Reset counter</p>
+          <form action="/hack" method="post">
+            <!-- <button type="submit" value="Reset" /> -->
+            <button class="counterBtn" type="submit" value="Reset">Reset</button>
+          </form>
+        </div>
+      </div>  <!-- end of wrapper -->
+    </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <title>Great Number Game</title>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/normalize.css') }}">
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+      <link href="{{ url_for('static', filename='images/smile.jpg') }}" rel="icon" type="image/x-icon" />
+    </head>
+    <body>
+      <div id="wrapper">
+        <div id="header">
+          <h2>Great Number Game</h2>
+        </div> <!-- end of header -->
+        <!-- <div id="myhdrmenu" >
+          <ul>
+           <li><a href="/"> Home </a></li>
+           <li><a href="http://localhost:5000/result" title="Result" target="_blank"> Results </a></li>
+          </ul>
+         </div> -->
+        <div class="gameDiv">
+          <h2>Welcome to the Great Number Game</h2>
+          <p>I am thinking of a number between 1 and 100.</p>
+          <p>Can you guess what it is?</p>
+          <form id="gameForm" action='/guess' method='post'>
+            <p><input type="text" name="number" placeholder="Your guess"></p>
+            <p><button class="gameBtn">Submit</button></p>
+          </form>
+        {% if session['guess'] == session['random'] %}
+          <div class='flex-container'>
+            <h2>{{ session['random'] }} was the number.</h2>
+            <a href="/"><button class="resetBtn">Play again?</button></a>
+          </div>
+          <p>You guessed it in only {{ session['intCounter'] }} guesses.
+          {% elif session['guess'] == 0 %}
+          {% elif session['guess'] < session['random'] %}
+            <div class='incorrectBox'>
+              <h2>Too low.</h2>
+            </div>
+          {% elif session['guess'] > session['random'] %}
+            <div class='incorrectBox'>
+              <h2>Too high.</h2>
+            </div>
+        {% endif %}
+        </div>
+      </div>  <!-- end of wrapper -->
+    </body>
+</html>

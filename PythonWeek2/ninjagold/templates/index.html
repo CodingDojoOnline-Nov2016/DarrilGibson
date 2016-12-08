@@ -50,19 +50,17 @@
         </div>
         <div>
           <p>Activities:</p>
-          <textarea cols="105" rows="5" name="log" readonly="true" style='{{ FONT_STYLE }}'>
-              {% for lines in session['history']  %}
-                {{ lines }}
-              {% endfor %}
-          </textarea>
+          <textarea cols="105" rows="5" name="log"
+          readonly="true" style='{{ FONT_STYLE }}'>{% for lines in session['history']  %}{{ lines }}
+          {% endfor %}</textarea>
         </div>
         <h2>Would you like to start over?</h2>
         <a href="/"><button class="resetBtn">Reset</button></a>
         <h2>Unfinished in Activities block</h2>
         <ul>
           <li>Output to Activities block is not styled (green for most, red for Casino losses)</li>
-          <li>Lines have undesired spaces at beginning</li>
-          <li>Lines have extra space between them</li>
+          <li>Lines have undesired spaces at beginning </li>
+          <li>Lines have extra space between them - Fixed</li>
         </ul>
       </div>  <!-- end of wrapper -->
     </body>

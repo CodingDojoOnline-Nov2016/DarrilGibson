@@ -37,7 +37,7 @@ def process():
         # 1 for win, 0 for lose
         random = randint(0,50)
         winlose = randint(1,2)
-        print 'winlose = ' +  str(session['winlose'])
+        print 'winlose = ' +  str(winlose)
         if winlose == 1: #win
             session['gold_score'] = session['gold_score'] + random
             log = "Entered a casino and won " + str(random) + " golds. Woo Hoo! " + timestamp

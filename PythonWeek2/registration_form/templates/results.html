@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <title>Result</title>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/normalize.css') }}">
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    </head>
+    <body>
+      <div id="wrapper">
+        <div id="header">
+          <h2>Result</h2>
+        </div> <!-- end of header -->
+        <div id="myhdrmenu" >
+          <ul>
+           <li><a href="/"> Home </a></li>
+           <li><a href="http://localhost:5000/results" title="Result" target="_blank"> Results </a></li>
+          </ul>
+         </div><!--  End of headermenu -->
+         <div class="surveyDiv">
+           <h2>Thanks for submitting our information. You are now registered.</h2>
+           <p>Name: {{session['fname']}} {{session['lname']}}</p>
+           <p>Email: {{session['email']}}</p>
+           <p>Password: {{session['password']}}</p>
+           <a href="/"><button class="surveyBtn">Go Back</button></a>
+        </div>
+      </div>  <!-- end of wrapper -->
+    </body>
+</html>

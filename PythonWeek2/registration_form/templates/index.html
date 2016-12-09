@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <title>Registration Form</title>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/normalize.css') }}">
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+      <link href="{{ url_for('static', filename='images/user.png') }}" rel="icon" type="image/x-icon" />
+    </head>
+    <body>
+      <div id="wrapper">
+        <div id="header">
+          <h2>Registration Form with Advanced Validation</h2>
+        </div> <!-- end of header -->
+        <div id="myhdrmenu" >
+          <ul>
+           <li><a href="/"> Home </a></li>
+           <li><a href="http://localhost:5000/result" title="Result" target="_blank"> Results </a></li>
+          </ul>
+         </div><!--  End of headermenu -->
+         <div class="errorDiv">
+           {% with messages = get_flashed_messages() %}
+             {% if messages %}
+               {% for message in messages %}
+                 <p>{{ message }}</p>
+               {% endfor %}
+             {% endif %}
+           {% endwith %}
+
+            {% block body %}
+              {{ data }}
+            {% endblock %}
+         </div>
+        <div class="registrationDiv">
+          <form id="registrationForm" action='/results' method='post'>
+            <p><label>First Name: </label><input type="text" name="fname" placeholder="First Name"></p>
+            <p><label>Last Name: </label><input type="text" name="lname" placeholder="Last Name"></p>
+            <p><label>Email: </label><input type="text" name="email" placeholder="email address"></p>
+            <p><label>Password: </label><input type="text" name="password" placeholder="password"></p>
+            <p><label>Confirm Password: </label><input type="text" name="cpassword" placeholder="Confirm Password"></p>
+            <div class="btnDiv">
+              <button class="registrationBtn">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>  <!-- end of wrapper -->
+    </body>
+</html>

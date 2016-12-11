@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Disappearing Ninjas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+  </head>
+  <body>
+    <div id="wrapper">
+        <div id="header">
+          <h2>Notes on Using Blocks</h2>
+        </div> <!-- end of header -->
+        <div id="myhdrmenu" >
+          <ul>
+           <li><a href="/"> Home </a></li>
+           <li><a href="http://localhost:5000/ninja" title="Ninja"> Ninja </a></li>
+           <li><a href="http://localhost:5000/notes" title="Notes on using blocks"> Notes </a></li>
+          </ul>
+         </div><!--  End of headermenu -->
+         <div class="notesDiv">
+           <h2>Notes on template usage</h2>
+            <p>Used this to try to expand usage of blocks</p>
+            <p>Blocks are defined in start.html.</p>
+            <p>.py file renders start.html.</p>
+            <p>Start.html extends base.html.</p>
+            <p>Doesn't look like one page can extend multiple pages. (Start.html doesn't extend ninja.html.).</p>
+            <p> </p>
+         </div>
+          <div class="footer">
+            <p>Pythen Zen Quote of the Day: {{ python_zen }}</p>
+          </div>
+      </div>  <!-- end of wrapper -->
+      <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+      <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

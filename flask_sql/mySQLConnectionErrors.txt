@@ -1,0 +1,26 @@
+
+sqlalchemy.exc.OperationalError: (_mysql_exceptions.OperationalError) (1045, "Access denied for user 'root2'@'localhost' (using password: YES)")
+ - Error number 1045
+ - Fix typo in user name (root instead of root2)
+
+sqlalchemy.exc.OperationalError: (_mysql_exceptions.OperationalError) (1045, "Access denied for user 'root2'@'localhost' (using password: YES)")
+ - Error number 1045
+ - Fix typo in password (root instead of root2)
+
+sqlalchemy.exc.OperationalError: (_mysql_exceptions.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.1' (10061)")
+ - Error number 2003
+ - Provide correct port number (3306 instead of 33061)
+
+sqlalchemy.exc.OperationalError: (_mysql_exceptions.OperationalError) (2003, "Can't connect to MySQL server on '127.0.0.2' (10061)")
+ - Error number 2003
+ - Provide correct IP address (127.0.0.1 instead of 127.0.0.2)
+
+Changed localhost to localhost 2. No error. Interesting.
+
+sqlalchemy.exc.OperationalError: (_mysql_exceptions.OperationalError) (1049, "Unknown database 'mydb2'")
+ - Error number 1049
+ - Fix typo in database name
+
+sqlalchemy.exc.ProgrammingError: (_mysql_exceptions.ProgrammingError) (1146, "Table 'mydb.users1' doesn't exist") [SQL: u'SELECT * FROM users1']
+ - Error number 1146
+ - Fix: correct typo in table name

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <title>Email Validation</title>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/normalize.css') }}">
+      <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+      <link href="{{ url_for('static', filename='images/smile.jpg') }}" rel="icon" type="image/x-icon" />
+    </head>
+    <body>
+      <div id="wrapper">
+        <div id="header">
+          <h2>Email Validation</h2>
+        </div> <!-- end of header -->
+        <!-- Put div within Jinja to hide it until needed -->
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <div id="errorDiv">
+              {% for message in messages %}
+                <p>{{message}}</p>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endwith %}
+        <div class="emailDiv">
+          <form action='/email' method='POST'>
+            <p><label for="email">Email: </label>
+            <input type="text" name="email" value="{{ session['email'] }}"></p>
+            <p><input type="submit" value="Submit"></p>
+          </form>
+        </div>
+      </div>  <!-- end of wrapper -->
+    </body>
+</html>

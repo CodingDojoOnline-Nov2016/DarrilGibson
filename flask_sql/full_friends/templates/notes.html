@@ -1,0 +1,71 @@
+<html>
+<head>
+  <title>Friends</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/normalize.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+  <link href="{{ url_for('static', filename='images/smile.jpg') }}" rel="icon" type="image/x-icon" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div id="wrapper">
+    <div id="header">
+      <h2>Full Friends</h2>
+    </div> <!-- end of header -->
+    <div id="myhdrmenu" >
+      <ul>
+        <li><a href="/"> Home </a></li>
+        <li><a href="#Add" title="Add a User" > Add </a></li>
+        <li><a href="http://localhost:5000/notes" title="Notes about RESTful routes" > Notes </a></li>
+      </ul>
+    </div><!--  End of headermenu -->
+    <h2>Notes</h2>
+    <p>RESTful route: A route that provides mapping between HTTP verbs (such as GET, POST, PUT, DELETE, and PATCH)
+       to database actions (CRUD or INSERT, SELECT, UPDATE, DELETE).</p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <p></p>
+    <table>
+      <thead>
+        <th>Method (HTTP VERB)</th>
+        <th>URL @app.route('')</th>
+        <th>Route Handler Function</th>
+        <th>Comments</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>GET</td>
+          <td>'/'</td>
+          <td>def index():</td>
+          <td>Show all users</td>
+        </tr>
+        <tr>
+          <td>POST</td>
+          <td>'/friends'</td>
+          <td>def create():</td>
+          <td>Create a new user from a form</td>
+        </tr>
+        <tr>
+          <td>GET</td>
+          <td>'/friends/&lt;id&gt;/edit'</td>
+          <td>def edit(id):</td>
+          <td>Show the edit page with a single user</td>
+        </tr>
+        <tr>
+          <td>POST</td>
+          <td>'/friends/&lt;id&gt;</td>
+          <td>def update(id):</td>
+          <td>Update a user</td>
+        </tr>
+        <tr>
+          <td>POST</td>
+          <td>'/friends/&lt;id&gt;/delete</td>
+          <td>def destroy(id):</td>
+          <td>Delete a user</td>
+        </tr>
+      </tbody>
+   </table>
+    </div>
+</body>
+</html>

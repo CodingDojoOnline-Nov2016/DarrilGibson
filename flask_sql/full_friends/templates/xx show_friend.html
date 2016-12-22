@@ -1,0 +1,23 @@
+<html>
+<head>
+  <title>Friends</title>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+</head>
+<body>
+
+
+  <h2>Show a Friend</h2>
+  <form action='/show_friend' method='GET'>
+    <label for="id">ID:<input type="text" name="id" id="id"></label>
+    <input type="submit" class="button-primary" value="Show">
+  </form>
+  {% for friend in one_friend: %}
+     <p>ID: {{ friend['id'] }}</p>
+     <p>First Name: {{ friend['first_name'] }}</p>
+     <p>Last Name: {{ friend['last_name'] }}</p>
+     <p>Occupation: {{ friend['occupation'] }}</p>
+     <hr>
+  {% endfor %}
+
+</body>
+</html>

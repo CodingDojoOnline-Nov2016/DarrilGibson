@@ -1,0 +1,102 @@
+{
+ margin: 20px;
+ padding: 10px;
+}
+#wrapper{
+ width: 970px;
+ height: auto;
+ background-color: white;
+ margin: 0 auto;
+}
+#header {
+  width:940px;
+  display: inline-block;
+  margin: 5px 5px 0px 5px;
+  padding: 10px;
+  background-color: blue;
+  border-bottom: 1px solid gray;
+  text-align: center;
+}
+  #header h2 {
+    margin: 0px 0px 0px 0px;
+    color: white;
+  }
+  #myhdrmenu {
+    background-color: blue;
+    margin: 0px 5px 10px 5px;
+    width: 940px;
+    height: 36px;
+    padding: 10px 0px 1px 20px;
+    font-weight: bold;
+    color: antiquewhite;
+    font-size: 14px;
+  }
+    #myhdrmenu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    }
+    #myhdrmenu li {
+    display: inline;
+    }
+    #myhdrmenu a {
+      text-decoration: none;
+      color: antiquewhite;
+    }
+    #myhdrmenu ul li a:hover {
+      color: white;
+      font-weight: bold;
+    }
+    #myhdrmenu li:not(:first-child):before {
+        content: " | ";
+    }
+.emailDiv {
+  display: table;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+  #emailForm input {
+    display: inline-block;
+  }
+.emailBtn {
+  border: 1px solid black;
+  /*margin-left: 50px;*/
+  background-color: gold;
+  color: black;
+  border-radius: 3px;
+  align-self: center;
+  align-items: center;
+}
+#errorDiv {
+  /*margin: 0 auto;*/
+  background-color: white;
+  color: red;
+  /*border: 1px solid black;*/
+  width: 500px;
+  padding: 10px;
+  text-align:left;
+  margin-top: 50px;
+}
+#successDiv {
+  margin: 0 auto;
+  background-color: green;
+  color: black;
+  border: 1px solid black;
+  width: 500px;
+  padding: 10px;
+  text-align: center;
+  margin-top: 50px;
+}
+  #successDiv h2 {
+    text-decoration: underline;
+  }
+.underline {
+  text-decoration: underline;
+}
+.hidden {
+  display: none;
+}
+.right {
+  align-self: center;
+}

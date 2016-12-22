@@ -1,0 +1,41 @@
+<html>
+<head>
+  <title>Friends</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/normalize.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+  <link href="{{ url_for('static', filename='images/smile.jpg') }}" rel="icon" type="image/x-icon" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div id="wrapper">
+    <div id="header">
+      <h2>Full Friends</h2>
+    </div> <!-- end of header -->
+    <div id="myhdrmenu" >
+      <ul>
+        <li><a href="/"> Home </a></li>
+        <li><a href="#Add" title="Add a User" > Add </a></li>
+        <li><a href="http://localhost:5000/notes" title="Notes about RESTful routes" > Notes </a></li>
+      </ul>
+     </div><!--  End of headermenu -->
+    <h2>Update User</h2>
+      <table>
+        <thead>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Email Address</th>
+          <th></th>
+        </thead>
+        <tbody>
+          <tr>
+            <td><form action='/friends/{{ user['id'] }}' method='POST'><input type="text" name="first_name" id="first_name" value="{{ user['first_name'] }}"></td>
+            <td><input type="text" name="last_name" id="last_name" value="{{ user['last_name'] }}"></td>
+            <td><input type="text" name="email" id="email"value="{{ user['email'] }}"></td>
+            <td><input type="submit" class="button-primary" value="Update"></form></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,72 @@
+{% extends "layout.html" %}
+{% block body %}
+<!-- Put div within Jinja to hide it until needed -->
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <div id="errorDiv">
+        {% for message in messages %}
+          <p>{{message}}</p>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+<h3>Post a message</h3>
+{% if error %}
+  <p class=error>Error: {{ error }}
+{% endif %}
+<div id="addMsgDiv">
+  <form id="addMsgForm" action='/postmessage' method='POST'>
+    <textarea rows="4" cols="110" id="message" name="message"></textarea>
+  </form>
+  <div class="divBtn">
+    <p><button class="addMsgBtn" form="addMsgForm">Post a message</button></p>
+  </div>
+</div>
+{% with messages = messages %}
+  {% if messages %}
+    <div id="msgDiv">
+      {% for message in messages %}
+        <p>{{message.first_name}} {{message.last_name}} - {{ message.created_at.strftime('%B %d, %Y' ) }}
+        <!-- Note: | safe renders html tags within the message. I wouldn't do this for
+        a live site capturing user messages, but this is perfect for the
+        cybersecurityglossary site, where I'll add the content. -->
+        <div class="divMessage"><p>{{ message.message | safe }}</p>
+        <!-- Only display delete button if the post is for the current user -->
+        {% if message.user_id == session['id'] %}
+          <div class="divBtn">
+            <form id="delMsgForm" name ="delete-message" action='/deletemessage/{{ message['msgid'] }}/delete' method='POST'>
+              <input type="submit" name="delete-message" value="Delete Post">
+            </form>
+          </div>
+        </div>
+        {% endif %} <!-- delete button  -->
+
+          {% if comments %}
+            <!-- Loop through comments and post relevant comments for this message -->
+            {% for comment in comments %}
+              <!-- <h5>Comments<h5> -->
+              {% if comment['message_id'] == message['id']%}
+              <div class="divComment">
+                <p>Comment by {{comment.first_name}} {{comment.last_name}} - {{ comment.created_at.strftime('%B %d, %Y' ) }}</p>
+                <p>{{ comment.comment }}</p>
+              </div>
+              {% endif %}
+            {% endfor %}
+          {% endif %} <!-- end of show comments  -->
+
+        </div>
+        <div class="divComment">
+          <h5>Post a Comment</h5>
+          <div class="divBtn">
+            <form id="addCommentForm" name="add-comment" action="/addcomment" method="POST">
+              <input type="hidden" name="msgid" value="{{ message['msgid'] }}">
+              <textarea rows="4" cols="100" id="comment" name="comment" placeholder="Make a comment here..." maxlength="2000"></textarea>
+              <input type="submit" name="add-comment" value="Add Comment">
+            </form>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
+{% endblock %}

@@ -1,0 +1,229 @@
+{
+ margin: 20px;
+ padding: 10px;
+}
+#wrapper{
+ width: 970px;
+ height: auto;
+ background-color: white;
+ margin: 0 auto;
+}
+#header {
+  width:940px;
+  display: inline-block;
+  margin: 5px 5px 0px 5px;
+  padding: 10px;
+  background-color: blue;
+  border-bottom: 1px solid gray;
+  text-align: center;
+}
+  #header h2 {
+    margin: 0px 0px 0px 0px;
+    color: white;
+  }
+  #myhdrmenu {
+    background-color: blue;
+    margin: 0px 5px 10px 5px;
+    width: 940px;
+    height: 36px;
+    padding: 10px 0px 1px 20px;
+    font-weight: bold;
+    color: antiquewhite;
+    font-size: 14px;
+  }
+    #myhdrmenu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    }
+    #myhdrmenu li {
+    display: inline;
+    }
+    #myhdrmenu a {
+      text-decoration: none;
+      color: antiquewhite;
+    }
+    #myhdrmenu ul li a:hover {
+      color: white;
+      font-weight: bold;
+    }
+    #myhdrmenu li:not(:first-child):before {
+        content: " | ";
+    }
+.wallhdr {
+  display: inline-block;
+  background-color: white;
+  margin: 0px 0px 10px 0px;
+  width: 960px;
+  height: 45px;
+  padding: 10px 0px 10px 0px;
+  font-weight: bold;
+  color: black;
+  font-size: 14px;
+  border-bottom: 3px solid black;
+}
+.wallhdrleft {
+  display: inline-block;
+  width: 350px;
+}
+.wallhdrctr {
+  display: inline-block;
+  width: 275px;
+  text-align: right;
+}
+.wallhdrright {
+  display: inline-block;
+  width: 300px;
+  text-align: right;
+  margin-right: 5px;
+}
+
+#footer {
+  width:940px;
+  display: inline-block;
+  margin: 5px 5px 0px 5px;
+  padding: 10px;
+  background-color: blue;
+  border-bottom: 1px solid gray;
+  text-align: center;
+}
+  #footer p {
+    margin: 0px 0px 0px 0px;
+    color: white;
+  }
+.bluegrad {
+    /*height: 200px;*/
+    background: blue; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left top, #8080ff, blue); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #8080ff, blue); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #8080ff, blue); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #8080ff, blue); /* Standard syntax (must be last) */
+}
+.graygrad {
+    /*height: 200px;*/
+    background: gray; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left top, #b3b3b3, gray); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(bottom right, #b3b3b3, gray); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(bottom right, #b3b3b3, gray); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to bottom right, #b3b3b3, gray); /* Standard syntax (must be last) */
+}
+#addUserForm {
+  display: table;
+  text-align: right;
+  width: 400px;
+  clear: both;
+}
+#addUserForm p {
+  display: table-row;
+  line-height: 2em;
+}
+#addUserForm label {
+  display: table-cell;
+}
+#addUserDiv {
+  width: 400px;
+  padding-top: 10px;
+}
+  .addUserBtn {
+    /*border: 1px solid black;*/
+    background-color: #33cdf0;
+    color: white;
+    border-radius: 10px;
+  }
+  .divBtn {
+    text-align: right;
+    /*margin-top: 25px;*/
+  }
+#addMsgDiv {
+  width: 800px;
+  padding-top: 10px;
+}
+#addMsgForm {
+  display: table;
+  text-align: right;
+  width: 750px;
+  clear: both;
+}
+  #addMsgForm p {
+    display: table-row;
+    line-height: 2em;
+  }
+  #addMsgForm label {
+    display: table-cell;
+  }
+  .deleteMsgBtn {
+    background-color: gray;
+    color: white;
+    border-radius: 10px;
+  }
+  .addMsgBtn {
+    /*border: 1px solid black;*/
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+  }
+  .addCommentBtn {
+    /*border: 1px solid black;*/
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+  }
+  .divMsgBtn {
+    text-align: right;
+    margin-top: 25px;
+  }
+.emailDiv {
+  display: table;
+  margin: 0 auto;
+  padding: 30px;
+}
+
+  #emailForm input {
+    display: inline-block;
+  }
+.emailBtn {
+  border: 1px solid black;
+  /*margin-left: 50px;*/
+  background-color: gold;
+  color: black;
+  border-radius: 3px;
+  align-self: center;
+  align-items: center;
+}
+#msgDiv {
+  background-color: white;
+  color: black;
+  width: 900px;
+  padding: 10px;
+  text-align:left;
+  /*margin-top: 50px;*/
+}
+#errorDiv {
+  background-color: white;
+  color: red;
+  width: 500px;
+  padding: 10px;
+  text-align:left;
+  margin-top: 50px;
+}
+.underline {
+  text-decoration: underline;
+}
+.hidden {
+  display: none;
+}
+.right {
+  align-self: center;
+}
+.message {
+  margin-left: 10px;
+  color: pink;
+}
+.divComment {
+  width: 800px;
+  margin-left: 20px;
+}
+.divMessage {
+  width: 800px;
+  margin-left: 10px;
+}

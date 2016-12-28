@@ -1,0 +1,46 @@
+<html>
+<head>
+  <title>The Wall</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/normalize.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+  <link href="{{ url_for('static', filename='images/brickwall.png') }}" rel="icon" type="image/x-icon" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <div id="wrapper">
+    <div id="header" class="bluegrad">
+      <h2>The Wall</h2>
+    </div> <!-- end of header -->
+    <div id="myhdrmenu" >
+      <ul>
+       <li><a href="/"> Home </a></li>
+      </ul>
+     </div><!--  End of headermenu -->
+     <div class="wallhdr">
+      <div class="wallhdrleft">
+        <h2>Coding Dojo Wall</h2>
+      </div>
+      <div class="wallhdrctr">
+        <!-- If session,  -->
+        {% if session['login'] == "True" %}
+          <p>Welcome {{ session['first_name'] }}</p>
+        {% endif %}
+      </div>
+      <div class="wallhdrright">
+        <!-- If session,  -->
+        {% if session['login'] == "True" %}
+          <p><a href="{{ url_for('logoff') }}">log off</a></p>
+        {% else %}
+          <p>Not logged in</p>
+        {% endif %}
+      </div>
+     </div>
+   <div>
+     {% block body %}{% endblock %}
+   </div>
+   <div id="footer" class="graygrad">
+     <p>{{ session['lyric'] }}</p>
+   <div>
+ </body>
+</html>

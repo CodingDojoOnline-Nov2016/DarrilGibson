@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block body %}
+<h1>Login</h1>
+{% if error %}
+  <p class=error><strong>Error:</strong> {{ error }}
+{% endif %}
+<div id="addUserDiv">
+  <form id="addUserForm" action='/login' method='POST'>
+    <!-- Used placeholder to remind me of user login, but would not do so on a potential production site -->
+    <p><label for="email">Email: <input type="text" name="email" id="email" placeholder="homer@simpson.com" value={{ email }}></label></p>
+    <p><label for="password">Password: <input type=password name="password" id="password"></label></p>
+    <!-- <input type="submit" class="button-primary" value="Login"> -->
+  </form>
+  <div class="divBtn">
+    <button class="addUserBtn" form="addUserForm">Log In</button>
+  </div>
+</div>
+<p>If you don't have an account, you can <a href="{{ url_for('showregister') }}">register</a> to get one here.</p>
+<!-- Put div within Jinja to hide it until needed -->
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <div id="errorDiv">
+        {% for message in messages %}
+          <p>{{message}}</p>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+{% endblock %}

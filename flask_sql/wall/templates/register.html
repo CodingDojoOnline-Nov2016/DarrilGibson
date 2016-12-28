@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block body %}
+  <h1>Register</h1>
+  <!-- Put div within Jinja to hide it until needed -->
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div id="errorDiv">
+          {% for message in messages %}
+            <p>{{message}}</p>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+  <div id="addUserDiv">
+    <form action='/register' method='POST' id="addUserForm">
+      <p><label for="first_name">First name: <input type="text" name="first_name" id="first_name" value="{{ first_name }}"></label></p>
+      <p><label for="last_name">Last name: <input type="text" name="last_name" id="last_name" value="{{ last_name }}"></label></p>
+      <p><label for="email">Email: <input type="text" name="email" id="email" value="{{ email }}"></label></p>
+      <p><label for="password">Password: <input type=password name="password" id="password"></label></p>
+      <p><label for="confirm_pw">Confirm Password: <input type=password name="confirm_pw" id="confirm_pw"></label></p>
+    </form>
+    <div class="divBtn">
+      <button class="addUserBtn" form="addUserForm">Register</button>
+    </div>
+  </div>
+{% endblock %}

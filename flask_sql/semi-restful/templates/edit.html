@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block body %}
+<h2>Edit User {{ id }} </h2>
+<!-- Put div within Jinja to hide it until needed -->
+  {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      <div class="errorDiv">
+        {% for message in messages %}
+          <p>{{message}}</p>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endwith %}
+<div class="aligned-form">
+  {% for oneuser in user %}
+    <form action="/users/{{ oneuser['id'] }}" method="POST" id="userForm" name="userForm">
+      <label for="first_name"><span>First name: </span>
+        <input type="text" name="first_name" id="first_name" value="{{ oneuser['first_name'] }}">
+      </label>
+      <label for="last_name"><span>Last name: </span>
+        <input type="text" name="last_name" id="last_name" value="{{ oneuser['last_name'] }}">
+      </label></p>
+      <label for="email"><span>Email: </span>
+        <input type="text" name="email" id="email" value="{{ oneuser['email'] }}">
+      </label>
+      <label><span>&nbsp;</span>
+        <input type="submit" value="Update" />
+      </label>
+    </form>
+  {% endfor %}
+</div>
+<hr>
+<h3>Instructions</h3>
+<p>Use to display a form allowing users to create a new user</p>
+GET request /users/&lt;id&gt;/edit - calls the edit method to display a form allowing users to edit an existing user with the given id. This will need a template.
+POST /users/&lt;id&gt; - calls the update method to process the submitted form sent from /users/&lt;id&gt;/edit. Have this redirect to /users/<id> once updated.
+{% endblock %}

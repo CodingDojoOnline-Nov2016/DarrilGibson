@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+{% block body %}
+<div class="aligned-form">
+  <form action="" method="POST" id="userForm" name="userForm">
+    <label for="first_name"><span>First name: </span>
+      <input type="text" name="first_name" id="first_name" value="">
+    </label>
+    <label for="last_name"><span>Last name: </span>
+      <input type="text" name="last_name" id="last_name" value="">
+    </label></p>
+    <label for="email"><span>Email: </span>
+      <input type="text" name="email" id="email" value="">
+    </label>
+    <label><span>&nbsp;</span>
+      <input type="submit" value="Update" />
+    </label>
+  </form>
+</div>
+</hr>
+{% endblock %}

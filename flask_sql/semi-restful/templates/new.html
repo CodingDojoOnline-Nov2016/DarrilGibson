@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block body %}
+  <div id="Add">
+    <h2>Add a User</h2>
+    <!-- Put div within Jinja to hide it until needed -->
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <div class="errorDiv">
+            {% for message in messages %}
+              <p>{{message}}</p>
+            {% endfor %}
+          </div>
+        {% endif %}
+      {% endwith %}
+    <div class="aligned-form">
+      <form action="/users/create" method="POST" id="userForm" name="userForm">
+        <label for="first_name"><span>First name: </span><input type="text" name="first_name" id="first_name" value="{{ first_name }}"></label>
+        <label for="last_name"><span>Last name: </span><input type="text" name="last_name" id="last_name" value="{{ last_name }}"></label>
+        <label for="email"><span>Email: </span><input type="text" name="email" id="email" value="{{ email }}"></label>
+          <label><span>&nbsp;</span>
+          <input type="submit" value="Create" />
+        </label>
+      </form>
+    </div>
+    <p><a href="{{ url_for('index') }}">Go Back</a></p>
+{% endblock %}

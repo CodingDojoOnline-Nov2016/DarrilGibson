@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <title>Result</title>
+      {% load staticfiles %}
+      <link rel="stylesheet" href="{% static 'surveyform/css/normalize.css' %}" charset="utf-8">
+      <link rel="stylesheet" href="{% static 'surveyform/css/styles.css' %}" charset="utf-8">
+    </head>
+    <body>
+      <div id="wrapper">
+        <div id="header">
+          <h2>Result</h2>
+        </div> <!-- end of header -->
+        <div id="myhdrmenu" >
+          <ul>
+           <li><a href="/"> Home </a></li>
+          </ul>
+         </div><!--  End of headermenu -->
+         <div class="surveyDiv">
+         </p>Thanks for submitting this form. You have submitted this form {{request.session.count}} times now.</p>
+         </div>
+         <div class="surveyDiv">
+           <h2>Submitted Info</h2>
+           <p>{{request.session.name}}</p>
+           <p>{{request.session.location}}</p>
+           <p>{{request.session.language}}</p>
+           <p>{{request.session.comments}}</p>
+           <a href="/"><button class="surveyBtn">Go Back</button></a>
+        </div>
+      </div>  <!-- end of wrapper -->
+    </body>
+</html>

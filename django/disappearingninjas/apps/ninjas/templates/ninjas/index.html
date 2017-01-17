@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ninjas</title>
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'ninjas/css/styles.css' %}"
+  </head>
+  <body>
+  <div id="wrapper">
+      <div id="header">
+        <h2>Where are the Ninjas?</h2>
+      </div> <!-- end of header -->
+      <div id="myhdrmenu" >
+        <ul>
+         <li><a href="/"> Home </a></li>
+         <li><a href="http://localhost:8000/ninja" title="Ninja"> Ninja </a></li>
+         <li><a href="http://localhost:8000/notes" title="Notes on using blocks" > Notes </a></li>
+        </ul>
+       </div><!--  End of headermenu -->
+       {% if request.session.color == "" %}
+        <h2>No ninjas here</h2>
+       {% else %}
+        <p>Ninjas here</p>
+       {% endif %}
+  </body>
+</html>

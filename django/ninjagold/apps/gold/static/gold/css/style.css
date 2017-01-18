@@ -165,3 +165,10 @@
     border: 3px solid black;
     margin: 5px;
     }
+
+.scrollingdiv {
+  width: 870px;
+  height: 100px;
+  overflow: scroll;
+  border: 1px solid black;
+}

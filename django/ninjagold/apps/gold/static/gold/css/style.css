@@ -1,0 +1,167 @@
+{
+ margin: 20px;
+ padding: 10px;
+}
+#wrapper{
+ width: 970px;
+ height: auto;
+ background-color: white;
+ margin: 0 auto;
+}
+#header {
+  width:940px;
+  display: inline-block;
+  margin: 5px 5px 0px 5px;
+  padding: 10px;
+  background-color: gold;
+  border-bottom: 1px solid gray;
+  text-align: center;
+}
+  #header h2 {
+    margin: 0px 0px 0px 0px;
+    color: black;
+  }
+  #myhdrmenu {
+    background-color: blue;
+    margin: 0px 5px 10px 5px;
+    width: 940px;
+    height: 36px;
+    padding: 10px 0px 1px 20px;
+    font-weight: bold;
+    color: antiquewhite;
+    font-size: 14px;
+  }
+    #myhdrmenu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    }
+    #myhdrmenu li {
+    display: inline;
+    }
+    #myhdrmenu a {
+      text-decoration: none;
+      color: antiquewhite;
+    }
+    #myhdrmenu ul li a:hover {
+      color: white;
+      font-weight: bold;
+    }
+    #myhdrmenu li:not(:first-child):before {
+        content: " | ";
+    }
+.gameDiv {
+  display: table;
+  margin: 0 auto;
+  padding: 30px;
+}
+  /*.gameDiv h2, p {
+    text-align: center;
+  }*/
+  #gameForm input {
+    display: inline-block;
+  }
+.gameBtn {
+  border: 1px solid black;
+  /*margin-left: 50px;*/
+  background-color: gold;
+  color: black;
+  border-radius: 3px;
+  align-self: center;
+  align-items: center;
+}
+.resetBtn {
+  /*display: inline;*/
+  /*vertical-align: middle;*/
+  border: 1px solid black;
+  /*margin-left: 10px;*/
+  background-color: aliceblue;
+  border-radius: 3px;
+}
+.red {
+  color: red;
+}
+.green {
+  color: green;
+}
+  /*.btnSpan {
+    display: table-cell;
+    vertical-align: middle;
+  }*/
+.correctBox {
+  margin: 0 auto;
+  width: 350px;
+  height: 350px;
+  line-height: 200px;
+  background-color: green;
+  color: white;
+  border: 3px solid black;
+  text-align: center;
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */
+}
+  /*.correctBox span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+  }*/
+  /*.correctBox h2 {
+    display: table-cell;
+    margin: 0;
+    vertical-align: middle;
+    text-align: center;
+  }*/
+.incorrectBox {
+  display: table;
+  margin: 0 auto;
+  width: 350px;
+  height: 350px;
+  background-color: red;
+  color: white;
+  border: 3px solid black;
+  text-align: center;
+}
+  .incorrectBox h2 {
+    display: table-cell;
+    margin: 0;
+    vertical-align: middle;
+    text-align: center;
+  }
+  /*Tried Flexy Boxes for centering items in the box*/
+  .flex-container {
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+      -webkit-justify-content: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+      align-content: center;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      text-align: center;
+      }
+    .activityBox {
+    -webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: center;
+    -ms-flex-item-align: center;
+    align-self: center;
+    width: 200px;
+    height: 200px;
+    border: 3px solid black;
+    margin: 5px;
+    }

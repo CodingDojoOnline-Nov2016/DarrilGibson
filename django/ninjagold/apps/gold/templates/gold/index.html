@@ -52,23 +52,16 @@
             </form>
           </div>
       </div>
-      <div>
-        <p>Activities:</p>
-        <!-- Indentation modified to fix display in textarea -->
-
-        <textarea cols="105" rows="5" name="log"
-        readonly="true" >{% for lines in request.session.history %}{% autoescape off %}{{ lines|safe }}{% endautoescape %}
-{% endfor %}</textarea>
-      </div>
       <p>Activities:</p>
-      {% for lines in request.session.history %}<p style="color:green">{{ lines|safe }}</p>
-{% endfor %}
+      <div class="scrollingdiv" >
+        {% for lines in request.session.history %}
+          <p style="color:green">{{ lines|safe }}</p>
+        {% endfor %}
+      </div>
       <h2>Would you like to start over?</h2>
       <a href="/"><button class="resetBtn">Reset</button></a>
-      <h2>Unfinished in Activities block</h2>
-      <ul>
-        <li>Output to Activities block is not styled (green for most, red for Casino losses)</li>
-      </ul>
+      <div>
+      </div>
     </div>  <!-- end of wrapper -->
   </body>
 </html>

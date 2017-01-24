@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>Email Validation</title>
+      {% load staticfiles %}
+      <link rel="stylesheet" href="{% static 'email_chk/css/normalize.css' %}">
+      <link rel="stylesheet" href="{% static 'email_chk/css/style.css' %}">
+    </head>
+    <body>
+      <div id="wrapper">
+        <div id="header">
+          <h2>Email Validation</h2>
+        </div> <!-- end of header -->
+        <!-- Put div within errors to hide it until needed -->
+          {% if request.session.errors %}
+            <div id="errorDiv">
+              {% for error in request.session.errors %}
+                <p>{{error}}</p>
+              {% endfor %}
+            </div>
+          {% endif %}
+        <div class="emailDiv">
+          <form action='/check_email' method='POST'>
+            {% csrf_token %}
+            <p><label for="email">Email: </label>
+            <input type="text" name="email" value="{{ request.session.email }}"></p>
+            <p><input type="submit" value="Submit"></p>
+          </form>
+        </div>
+      </div>  <!-- end of wrapper -->
+    </body>
+</html>

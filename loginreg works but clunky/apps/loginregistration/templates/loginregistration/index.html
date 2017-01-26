@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>Login and Registration</title>
+      {% load staticfiles %}
+      <link rel="stylesheet" href="{% static 'loginregistration/css/normalize.css' %}">
+      <link rel="stylesheet" href="{% static 'loginregistration/css/styles.css' %}">
+      <link rel="stylesheet" href="{% static 'loginregistration/css/form.css' %}">
+    </head>
+    <body>
+      <div id="wrapper">
+        <div id="header">
+          <h2> Registration</h2>
+        </div> <!-- end of header -->
+          <!-- Put div within errors to hide it until needed -->
+            {% if request.session.errors %}
+              <div class="errorDiv">
+                {% for error in request.session.errors.1 %}
+                  <p>{{error}}</p>
+                {% endfor %}
+              </div>
+            {% endif %}
+        <h2>Registration</h2>
+          <div class="aligned-form">
+            <form action='/register' method='POST' >
+              {% csrf_token %}
+              <label for="first_name">First name: <input type="text" name="firstname"  value={{ request.session.firstname }}></label>
+              <label for="last_name">Last name: <input type="text" name="lastname"  value={{ request.session.lastname }}></label>
+              <label for="email">Email: <input type="text" name="email"  value={{ request.session.email }}></label>
+              <label for="password">Password: <input type=password name="password" ></label>
+              <label for="confirm_pw">Confirm Password: <input type=password name="confirm_pw"></label>
+              <p><input type="submit" class="button-primary" value="Register"></p>
+            </form>
+
+            <h2>Login</h2>
+            <form action='/login' method='POST'>
+              {% csrf_token %}
+              <label for="email">Email: <input type="text" name="email"  value={{ request.session.email }}></label>
+              <label for="password">Password: <input type=password name="password" ></label>
+              <p><input type="submit" class="button-primary" value="Login"></p>
+            </form>
+              <p>{{ request.session.msg }}</p>
+            <a href="/">Home</a>
+            <a href="show">Show</a>
+          </div>
+        </div>
+      </div>  <!-- end of wrapper -->
+    </body>
+</html>

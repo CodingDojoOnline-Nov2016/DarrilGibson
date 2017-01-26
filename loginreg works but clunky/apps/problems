@@ -1,0 +1,12 @@
+Fix problems after register
+
+Can I do flash messages?
+
+Add edit capability
+
+
+Resolved
+Check if import bcrypt is needed in models.py
+ Yes it's required
+
+Errors box still has border

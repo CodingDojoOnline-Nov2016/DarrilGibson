@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>For debugging</title>
+    </head>
+    <body>
+      <p><a href="/">Home</a> | Logout </p>
+      <h2>Add a New Book Title and a Review:</h2>
+      {% if messages %}
+        <div class="errorDiv">
+          {% for error in messages %}
+            <p>{{error}}</p>
+          {% endfor %}
+        </div>
+      {% endif %}
+      <div class="aligned-form">
+        <form action='/newbook' method='POST' >
+          {% csrf_token %}
+          <label for="title"><span>Book Title: </span><input type="text" name="title"  value={{ request.session.title }}></label>
+          <p>Author</p>
+          <label for="author"><span>Choose from the list: </span>
+            <select name="authorlist">
+              <option value="default">Please choose one</option>
+            </select>
+          <label for="author"><span>Or add a new author: </span><input type="text" name="author"  value={{ request.session.author }}></label>
+          <label for="review"><span>Review: </span><input type="textbox" name="review"  value={{ request.session.review }}></label>
+          <label for="rating"><span>Rating: </span>
+            <select name="authorlist">
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          <p><input type="submit" class="button-primary" value="Add Book and Review"></p>
+        </form>
+        {% for message in messages %}
+          <p>{{ message }}</p>
+        {% endfor %}
+      </div>
+
+    </body>
+</html>

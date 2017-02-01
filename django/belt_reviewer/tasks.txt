@@ -1,0 +1,6 @@
+Add logout
+After logging in, should go to display books page
+
+Add session data
+
+Check for session

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>Login and Registration</title>
+      {% load staticfiles %}
+      <link rel="stylesheet" href="{% static 'reviews/css/normalize.css' %}">
+      <link rel="stylesheet" href="{% static 'reviews/css/styles.css' %}">
+      <link rel="stylesheet" href="{% static 'reviews/css/form.css' %}">
+    </head>
+    <body>
+      <div id="wrapper">
+        <div id="header">
+          <h2>Add Book and Review</h2>
+        </div> <!-- end of header -->
+        {% if messages %}
+          <div class="errorDiv">
+            {% for error in messages %}
+              <p>{{error}}</p>
+            {% endfor %}
+          </div>
+        {% endif %}
+        <div class="aligned-form">
+          <form action='/reviews/create' method='POST' >
+            {% csrf_token %}
+            <label for="title"><span>Book Title: </span>
+              <input type="text" name="title"  value={{ request.session.title }}></label>
+            <p><label><span>Author</span></label></p></br>
+            <p><label for="author"><span>Choose from the list: </span></label></p>
+              <select name="authorlist">
+                <option value="default">Please choose one</option>
+              </select></p></br>
+            <p><label for="author"><span>Or add a new author: </span></p>
+              <input type="text" name="author"  value={{ request.session.author }}></label></p></br>
+            <p><label for="review"><span>Review: </span></p>
+                <textarea rows="4" cols="110" name="review" value={{ request.session.review }}></textarea></label>
+            <p><label for="rating"><span>Rating (1 to 5): </span>	<input type="number" name="rating" min="0" max="5" value="0">
+{% comment %}
+              <select name="authorlist">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+{% endcomment %}
+            <p><span><input type="submit" class="button-primary" value="Add Book and Review"></span></p>
+          </form>
+          {% for message in messages %}
+            <p>{{ message }}</p>
+          {% endfor %}
+        </div>
+        <a href="/">Home</a> |
+        <a href="show">Show Registered Users</a> |
+        <a href="reviews/">Show reviews</a>
+      </div>
+    </div>
+  </div>  <!-- end of wrapper -->
+</body>
+</html>

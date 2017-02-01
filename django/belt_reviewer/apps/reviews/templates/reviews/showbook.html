@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <title>Book created</title>
+      <title>Login and Registration</title>
+      {% load staticfiles %}
+      <link rel="stylesheet" href="{% static 'reviews/css/normalize.css' %}">
+      <link rel="stylesheet" href="{% static 'reviews/css/styles.css' %}">
+      <link rel="stylesheet" href="{% static 'reviews/css/form.css' %}">
+    </head>
+    <body>
+        <div>
+          <h2>{{ title }}</h2>
+        <div>
+        <h2 class="underline">Email Addresses Entered</h2>
+        <table class=emailtable>
+          <tr>
+            <th>Email Address</th>
+            <th>Date Created</th>
+            <th>Action</th>
+          </tr>
+          {% for user in users %}
+          <tr>
+              <td>{{user.email}}</td>
+              <td>{{user.created_at }}</td>
+              <td><a href="/show/{{user.id}}/delete">Delete Email</a></td>
+          </tr>
+          {% endfor %}
+        </table>
+        {% for message in messages %}
+          <p>{{ message }}</p>
+        {% endfor %}
+      </div>
+      <a href="/">Home</a>
+    </body>
+</html>
